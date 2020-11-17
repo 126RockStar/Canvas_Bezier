@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Bezier-editor-demo</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+	<!-- <script type="text/javascript" src="bezier-editor.js"></script> -->
+	<script type="text/javascript" src="bezier-show.js"></script>
+	<style type="text/css">
+		html, body {
+			margin:0;
+			padding:0;
+		}
+		canvas {
+			margin-top:-5px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div id="test"></div>
+		<canvas id="bezier-canvas" width="640" height="480"></canvas>
+	</div>
+	<script type="text/javascript">        
+		var show = new bezierShow("bezier-canvas");
+		show.set([
+			{start: [169, 108],c1:[94, 192],c2:[70, 266],end: [218,201]},
+			{start: [218, 201],c1:[366, 136],c2:[711, 202],end: [495,312]},
+			{start: [495, 312],c1:[279, 422],c2:[173, 376],end: [144,317]},
+			{start: [144, 317],c1:[115, 258],c2:[249, 117],end: [278,110]},
+			{start: [278, 110],c1:[307, 103],c2:[426, 108],end: [462,129]},
+
+		])
+		show.setStyle('#00f58b', 10);
+
+		show.draw();
+    </script>
+</body>
+</html>
